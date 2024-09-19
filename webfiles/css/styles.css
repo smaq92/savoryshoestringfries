@@ -1,0 +1,271 @@
+:root {
+  --raleway-button: 2.4rem/1.125 "Raleway", sans-serif;
+  --raleway-banner: 6rem/1.35 "Raleway", sans-serif;
+  --raleway-h1: 5rem/1.08 "Raleway", sans-serif;
+  --lora-body: 1.8rem/1.5 "Lora", serif;
+  --patrick-h2: 4rem/1.35 "Patrick-hand", cursive;
+  --patrick-h3: 2.5rem/1.125 "Patrick-hand", cursive;
+  --yellow: #fef3c7;
+  --dark-blue: #121241;
+  --heading-color: #17176f;
+  --body-font-color: #141414;
+  --background-color: #fafafa;
+  --orange: rgb(255, 161, 21);
+}
+
+body {
+  font: var(--lora-body);
+  background-color: var(--background-color);
+  color: var(--body-font-color);
+}
+
+main,
+.footer-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* **Typographical Styles** */
+h1,
+h2,
+h3 {
+  color: #17176f;
+  text-align: center;
+}
+
+h1 {
+  font: var(--raleway-h1);
+}
+
+h2 {
+  font: var(--patrick-h2);
+  padding: 1.35rem 0;
+}
+
+h3 {
+  font: var(--patrick-h3);
+  padding: 1.35rem 0;
+}
+
+.shine {
+  color: brown;
+}
+
+/** Styles **/
+header {
+  background-image: url(../img/french-fries-pile-hero-1190x502.webp);
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: center;
+  padding: 5.4rem;
+}
+
+header h1 {
+  padding: 5.4rem 0 0;
+}
+
+.tagline {
+  background-color: var(--dark-blue);
+  color: var(--yellow);
+  font: 2.7rem/1 "Patrick Hand", cursive;
+  text-align: center;
+  display: inline-block;
+  padding: 0.6rem 1.8rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 70%);
+  z-index: 1;
+  margin: 0 0 5.4rem;
+  -webkit-transform: translate(-50%, 70%);
+  -moz-transform: translate(-50%, 70%);
+  -ms-transform: translate(-50%, 70%);
+  -o-transform: translate(-50%, 70%);
+}
+
+svg {
+  width: 4.8rem;
+}
+
+.tog-btn {
+  background: transparent;
+  border: none;
+  position: sticky;
+  top: 10%;
+  left: 90%;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.nav-wrapper nav {
+  background-color: var(--yellow);
+  width: 40vw;
+  max-width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: left 0.5s ease;
+  padding: 2.7rem 0;
+  z-index: 1000;
+  -webkit-transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -ms-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+}
+
+nav a {
+  color: var(--dark-blue);
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  width: 100%;
+}
+
+nav a:hover {
+  color: var(--yellow);
+  background-color: var(--dark-blue);
+}
+
+nav li {
+  font: var(--raleway-button);
+  margin: 1.35rem;
+}
+
+.button-wrapper {
+  background-color: var(--dark-blue);
+}
+
+nav ul {
+  margin: 5.4rem auto;
+}
+
+.show-nav {
+  left: 0 !important;
+}
+
+/* main*/
+main {
+  padding: 0 1.35rem;
+}
+
+section {
+  max-width: 90ch;
+  margin: 5.4rem auto;
+}
+
+section > div {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2.7rem;
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+article {
+  padding: 2.7rem 0;
+  flex: 1 1 auto;
+}
+
+article:nth-of-type(2),
+article:nth-of-type(3) {
+  flex: 1 0 300px;
+}
+
+.image-container {
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* footer */
+footer {
+  background: var(--dark-blue);
+  padding: 5.4rem 0;
+}
+
+footer ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+footer ul li {
+  flex: 1 1 290px;
+}
+
+footer a {
+  color: var(--background-color);
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  width: 100%;
+  text-align: center;
+}
+
+footer a:hover{
+  color: var(--dark-blue);
+  background-color: var(--background-color);
+}
+
+@media screen and (min-width: 671px) {
+  .recipe-heading {
+    max-width: 10ch;
+    margin: 0 auto;
+  }
+
+  .image-250-container {
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .tog-btn{
+    display: none;
+  }
+
+  .nav-wrapper nav {
+    background-color: var(--dark-blue);
+    width: unset;
+    max-width: unset;
+    height: unset;
+    position: fixed;
+    padding: unset;
+    top: 0;
+    left: unset;
+    transition: unset;
+    width: 100vw;
+    z-index: 1000;
+    -webkit-transition: unset;
+    -moz-transition: unset;
+    -ms-transition: unset;
+    -o-transition: unset;
+  }
+
+  nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 1.35rem;
+  }
+
+  nav ul li {
+    flex: 1 1 auto;
+    margin: unset;
+  }
+
+  nav a {
+    color: var(--background-color);
+    display: inline-block;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a:hover {
+    color: var(--dark-blue);
+    background-color: var(--background-color);
+  }
+
+}
